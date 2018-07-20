@@ -11,20 +11,21 @@ import RealmSwift
 
 
 
-//class Model: Object {
-//
-//  @objc dynamic var itemIndex: String?
-//  @objc dynamic var itemName: String?
-//
-//}
+class Model: Object {
 
-class Model {
+  @objc dynamic var itemIndex: String = ""
+  @objc dynamic var itemName: String = ""
 
-  var itemIndex: String?
-  var itemName: String?
-
-  init(itemIndex: String, itemName: String) {
-    self.itemIndex = itemIndex
-    self.itemName = itemName
-  }
 }
+
+
+//class Model {
+//
+//  var itemIndex: String?
+//  var itemName: String?
+//
+//  init(itemIndex: String, itemName: String) {
+//    self.itemIndex = itemIndex
+//    self.itemName = itemName
+//  }
+//}

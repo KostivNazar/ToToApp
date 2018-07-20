@@ -19,18 +19,7 @@ protocol ViewModelDelegate {
 
 class ViewModel {
 
-  var items = [Model]()
-
-  func getDataFromDb() {
-
-  }
-  
-  func saveToDb() {
-
-  }
-  func removeFromD() {
-
-  }
+  //var items = [Model]()
 
   var reload: ReloadTableView
   init(viewDelegate: ReloadTableView) {
@@ -39,12 +28,28 @@ class ViewModel {
   }
 }
 
+
 extension ViewModel: ViewModelDelegate {
+
   func onItemAddClick(newItem: String) {
-
-    let itemCount = "\(items.count + 1)"
-    items.append(Model(itemIndex: itemCount, itemName: newItem))
-
-    reload.reloadTableView(index: items.count)
+    let model = Model()
+    model.itemName = newItem
+    model.itemIndex = "\(DBManager.sharedInstance.getDataFromDB().count + 1)"
+    DBManager.sharedInstance.addData(object: model)
+    reload.reloadTableView(index: DBManager.sharedInstance.getDataFromDB().count)
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

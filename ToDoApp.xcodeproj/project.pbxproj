@@ -16,6 +16,7 @@
 		74430BE92100E8710080F346 /* ItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74430BE72100E8710080F346 /* ItemTableViewCell.xib */; };
 		74430BED2100EAC70080F346 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74430BEC2100EAC70080F346 /* Model.swift */; };
 		74430BEF2100F0CE0080F346 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74430BEE2100F0CE0080F346 /* ViewModel.swift */; };
+		74C119602101D58A001A24BA /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C1195F2101D58A001A24BA /* RealmManager.swift */; };
 		F2B18961A8127DBF4D1FC5F6 /* Pods_ToDoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17DD052FC36E153B2C7B9F0C /* Pods_ToDoApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,7 @@
 		74430BE72100E8710080F346 /* ItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemTableViewCell.xib; sourceTree = "<group>"; };
 		74430BEC2100EAC70080F346 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		74430BEE2100F0CE0080F346 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		74C1195F2101D58A001A24BA /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,15 +71,16 @@
 		74430BD12100E6DF0080F346 /* ToDoApp */ = {
 			isa = PBXGroup;
 			children = (
-				74430BD22100E6DF0080F346 /* AppDelegate.swift */,
+				74430BEC2100EAC70080F346 /* Model.swift */,
+				74430BEE2100F0CE0080F346 /* ViewModel.swift */,
+				74C1195F2101D58A001A24BA /* RealmManager.swift */,
 				74430BD42100E6DF0080F346 /* ViewController.swift */,
+				74430BD62100E6DF0080F346 /* Main.storyboard */,
+				74430BD92100E6E00080F346 /* Assets.xcassets */,
 				74430BE62100E8710080F346 /* ItemTableViewCell.swift */,
 				74430BE72100E8710080F346 /* ItemTableViewCell.xib */,
-				74430BD62100E6DF0080F346 /* Main.storyboard */,
-				74430BEE2100F0CE0080F346 /* ViewModel.swift */,
-				74430BEC2100EAC70080F346 /* Model.swift */,
-				74430BD92100E6E00080F346 /* Assets.xcassets */,
 				74430BDB2100E6E00080F346 /* LaunchScreen.storyboard */,
+				74430BD22100E6DF0080F346 /* AppDelegate.swift */,
 				74430BDE2100E6E00080F346 /* Info.plist */,
 			);
 			path = ToDoApp;
@@ -220,6 +223,7 @@
 				74430BE82100E8710080F346 /* ItemTableViewCell.swift in Sources */,
 				74430BD32100E6DF0080F346 /* AppDelegate.swift in Sources */,
 				74430BEF2100F0CE0080F346 /* ViewModel.swift in Sources */,
+				74C119602101D58A001A24BA /* RealmManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
