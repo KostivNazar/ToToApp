@@ -7,8 +7,16 @@
 //
 
 import Foundation
+import RealmSwift
 
 
+
+//class Model: Object {
+//
+//  @objc dynamic var itemIndex: String?
+//  @objc dynamic var itemName: String?
+//
+//}
 
 class Model {
 
@@ -18,18 +26,5 @@ class Model {
   init(itemIndex: String, itemName: String) {
     self.itemIndex = itemIndex
     self.itemName = itemName
-  }
-
-  init(dictionary: NSDictionary) {
-    self.itemIndex = dictionary["itemIndex"] as? String
-    self.itemName = dictionary["itemName"] as? String
-  }
-
-  public class func modelFromDict(array: NSArray) -> [Model] {
-    var items = [Model]()
-    for data in array {
-      items.append(Model(dictionary: data as! NSDictionary))
-    }
-    return items
   }
 }

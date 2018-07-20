@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import RealmSwift
 
 protocol ReloadTableView {
   func reloadTableView(index: Int)
@@ -16,18 +16,28 @@ protocol ReloadTableView {
 protocol ViewModelDelegate {
   func onItemAddClick(newItem: String)
 }
+
 class ViewModel {
 
   var items = [Model]()
-  
-  var reload: ReloadTableView
 
+  func getDataFromDb() {
+
+  }
+  
+  func saveToDb() {
+
+  }
+  func removeFromD() {
+
+  }
+
+  var reload: ReloadTableView
   init(viewDelegate: ReloadTableView) {
     reload = viewDelegate
     
   }
 }
-
 
 extension ViewModel: ViewModelDelegate {
   func onItemAddClick(newItem: String) {
