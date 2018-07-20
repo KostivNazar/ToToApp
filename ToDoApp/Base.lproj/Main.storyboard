@@ -50,11 +50,52 @@
                     <connections>
                         <outlet property="itemTableView" destination="ySr-7j-Rc9" id="jsQ-tb-aih"/>
                         <outlet property="itemTextField" destination="Laz-Za-af0" id="Ile-7s-AZI"/>
+                        <segue destination="aaK-oJ-Nfc" kind="show" identifier="goToDetail" id="Bmc-uY-my6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="12" y="116"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="0Vm-FK-fmt">
+            <objects>
+                <viewController id="aaK-oJ-Nfc" customClass="DetailViewController" customModule="ToDoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="81x-Ju-q6P">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vBn-8s-bAk">
+                                <rect key="frame" x="42" y="120" width="291" height="293"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="54"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wy8-AI-TkW">
+                                <rect key="frame" x="88" y="465" width="199" height="131"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.94543314846127013" blue="0.78263325344622714" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Go Back To List">
+                                    <color key="titleShadowColor" red="1" green="0.33194583026917046" blue="0.23004033355226949" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressBackAction:" destination="aaK-oJ-Nfc" eventType="touchUpInside" id="821-5z-pBs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="RFQ-wh-5xF"/>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="vBn-8s-bAk" id="r4D-Eb-4BO"/>
+                        <outlet property="pressBackAction" destination="wy8-AI-TkW" id="sfd-be-PdW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BDG-id-Ep1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="764" y="111.99400299850076"/>
         </scene>
     </scenes>
 </document>

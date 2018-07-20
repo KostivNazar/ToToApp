@@ -11,6 +11,8 @@ import RealmSwift
 
 class ViewController: UIViewController {
 
+  var selectedData: String?
+
   var viewModel: ViewModel?
 
   @IBOutlet weak var itemTextField: UITextField!
@@ -51,6 +53,20 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
       tableView.reloadData()
     }
     return [deleteAction]
+  }
+
+
+   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+    let item = DBManager.sharedInstance.getDataFromDB()[indexPath.row]
+    selectedData = Model(value: item).itemName
+    self.performSegue(withIdentifier: "goToDetail", sender: self)
+  }
+
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "goToDetail" {
+      (segue.destination as! DetailViewController).textData = selectedData
+    }
   }
   
 }
