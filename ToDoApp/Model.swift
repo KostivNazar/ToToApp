@@ -16,16 +16,9 @@ class Model: Object {
   @objc dynamic var itemIndex: String = ""
   @objc dynamic var itemName: String = ""
 
+  convenience init(itemIndex: String) {
+    self.init()
+    self.itemIndex = itemIndex
+  }
 }
 
-
-//class Model {
-//
-//  var itemIndex: String?
-//  var itemName: String?
-//
-//  init(itemIndex: String, itemName: String) {
-//    self.itemIndex = itemIndex
-//    self.itemName = itemName
-//  }
-//}

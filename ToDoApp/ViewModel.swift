@@ -19,8 +19,6 @@ protocol ViewModelDelegate {
 
 class ViewModel {
 
-  //var items = [Model]()
-
   var reload: ReloadTableView
   init(viewDelegate: ReloadTableView) {
     reload = viewDelegate

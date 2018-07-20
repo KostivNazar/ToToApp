@@ -25,7 +25,6 @@ class DBManager {
   func addData(object: Model){
     try! database.write {
       database.add(object)
-      print("Added new object")
     }
   }
 

@@ -41,6 +41,18 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     cell?.setupDataFromModel(model: (DBManager.sharedInstance.getDataFromDB()[indexPath.row]))
     return cell!
   }
+
+  func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+
+    let editingRow = DBManager.sharedInstance.getDataFromDB()[indexPath.row]
+
+    let deleteAction = UITableViewRowAction(style: .default, title: "Delete") {_,_ in
+      DBManager.sharedInstance.deleteFromDb(object: editingRow)
+      tableView.reloadData()
+    }
+    return [deleteAction]
+  }
+  
 }
 
 extension ViewController: ReloadTableView {
