@@ -18,6 +18,7 @@
 		74430BEF2100F0CE0080F346 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74430BEE2100F0CE0080F346 /* ViewModel.swift */; };
 		74C119602101D58A001A24BA /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C1195F2101D58A001A24BA /* RealmManager.swift */; };
 		74C11962210201C8001A24BA /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C11961210201C8001A24BA /* DetailViewController.swift */; };
+		74F7E7022105C01900D2A34B /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F7E7012105C01900D2A34B /* DetailViewModel.swift */; };
 		F2B18961A8127DBF4D1FC5F6 /* Pods_ToDoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17DD052FC36E153B2C7B9F0C /* Pods_ToDoApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		74430BEE2100F0CE0080F346 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		74C1195F2101D58A001A24BA /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		74C11961210201C8001A24BA /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		74F7E7012105C01900D2A34B /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,20 +75,45 @@
 		74430BD12100E6DF0080F346 /* ToDoApp */ = {
 			isa = PBXGroup;
 			children = (
-				74430BEC2100EAC70080F346 /* Model.swift */,
-				74430BEE2100F0CE0080F346 /* ViewModel.swift */,
-				74C1195F2101D58A001A24BA /* RealmManager.swift */,
-				74430BD42100E6DF0080F346 /* ViewController.swift */,
-				74C11961210201C8001A24BA /* DetailViewController.swift */,
+				74F7E7042105C1EC00D2A34B /* Model */,
+				74F7E7032105C1E500D2A34B /* View */,
+				74F7E7002105C00000D2A34B /* ViewModel */,
 				74430BD62100E6DF0080F346 /* Main.storyboard */,
 				74430BD92100E6E00080F346 /* Assets.xcassets */,
-				74430BE62100E8710080F346 /* ItemTableViewCell.swift */,
 				74430BE72100E8710080F346 /* ItemTableViewCell.xib */,
 				74430BDB2100E6E00080F346 /* LaunchScreen.storyboard */,
 				74430BD22100E6DF0080F346 /* AppDelegate.swift */,
 				74430BDE2100E6E00080F346 /* Info.plist */,
 			);
 			path = ToDoApp;
+			sourceTree = "<group>";
+		};
+		74F7E7002105C00000D2A34B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				74F7E7012105C01900D2A34B /* DetailViewModel.swift */,
+				74430BEE2100F0CE0080F346 /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		74F7E7032105C1E500D2A34B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				74C11961210201C8001A24BA /* DetailViewController.swift */,
+				74430BE62100E8710080F346 /* ItemTableViewCell.swift */,
+				74430BD42100E6DF0080F346 /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		74F7E7042105C1EC00D2A34B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				74430BEC2100EAC70080F346 /* Model.swift */,
+				74C1195F2101D58A001A24BA /* RealmManager.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		9884019E9D36EE30BD34C827 /* Pods */ = {
@@ -183,13 +210,17 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ToDoApp/Pods-ToDoApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -228,6 +259,7 @@
 				74430BEF2100F0CE0080F346 /* ViewModel.swift in Sources */,
 				74C119602101D58A001A24BA /* RealmManager.swift in Sources */,
 				74C11962210201C8001A24BA /* DetailViewController.swift in Sources */,
+				74F7E7022105C01900D2A34B /* DetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

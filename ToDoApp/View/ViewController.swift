@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import RealmSwift
 
 class ViewController: UIViewController {
 
@@ -65,7 +64,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
 
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "goToDetail" {
-      (segue.destination as! DetailViewController).textData = selectedData
+      (segue.destination as! DetailViewController).viewModel = DetailViewModel(title: selectedData ?? "")
     }
   }
   

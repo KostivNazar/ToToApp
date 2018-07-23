@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import RealmSwift
 
 protocol ReloadTableView {
   func reloadTableView(index: Int)
@@ -25,7 +24,6 @@ class ViewModel {
     
   }
 }
-
 
 extension ViewModel: ViewModelDelegate {
 

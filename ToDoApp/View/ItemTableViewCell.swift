@@ -27,5 +27,4 @@ class ItemTableViewCell: UITableViewCell {
     self.itemNameLabel.text = model.itemIndex
     self.itemIndexLabel.text = model.itemName
   }
-    
 }

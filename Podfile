@@ -6,5 +6,6 @@ target 'ToDoApp' do
   use_frameworks!
 
   pod 'RealmSwift'
+  pod 'ReactiveSwift', '~> 3.0'
 
 end
